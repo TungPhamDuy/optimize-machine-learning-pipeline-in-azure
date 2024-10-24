@@ -1,11 +1,13 @@
 # Optimizing an ML Pipeline in Azure
 
 ## Overview
+
 This project is part of the Udacity Azure ML Nanodegree.
 In this project, we build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
 This model is then compared to an Azure AutoML run.
 
 ## Useful Resources
+
 - [ScriptRunConfig Class](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.scriptrunconfig?view=azure-ml-py)
 - [Configure and submit training runs](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-set-up-training-targets)
 - [HyperDriveConfig Class](https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.hyperdrive.hyperdriveconfig?view=azure-ml-py)
@@ -14,22 +16,27 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 **Explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+
 The [dataset](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv) contains information about bank customers and marketing campaigns. It includes features like customer demographics and campaign details. The goal is to use a classification model to predict whether a customer will subscribe to a term deposit based on this data. The target variable (y) indicates whether the customer has already subscribed to a term deposit.
 
 **Explain the solution: e.g. "The best performing model was a ..."**
+
 The AutoML process evaluated various classification models and configurations to determine the best-performing model for predicting term deposit subscriptions. The primary metric used for evaluation was `Accuracy`
 
 The `VotingEnsemble` model emerged as the top performer, outperforming other models like `LightGBM` and `XGBoostClassifier`. This suggests that combining the predictions from multiple models through a voting mechanism effectively improved the overall predictive accuracy.
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+
 - After downloading the data, a cleaning and preprocessing operation was performed, which involved handling missing values, converting categorical variables into numerical formats, and mapping specific string values to integers.  
 - Once the data was cleaned, it was split into training and testing sets for model evaluation.
 
 **What are the benefits of the parameter sampler you chose?**
+
 - The `RandomParameterSampling` method was chosen to explore hyperparameters such as `inverse regularization strength (C)` ranging from 0.1 to 10 and `max iterations` with values of 50, 75, and 100. Unlike an exhaustive grid search, this method randomly selects a subset of hyperparameters, which significantly reduces the computational time and cost, making the process more efficient.
 
 **What are the benefits of the early stopping policy you chose?**
+
 - The `BanditPolicy` was used for early stopping, which helps conserve computational resources by terminating runs that are underperforming. If a runs performance is 10% worse than the best-performing run during intermediate evaluations, it is stopped early to avoid unnecessary computation.
 
 **List of runs of Logistic model**
