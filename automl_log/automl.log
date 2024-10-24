@@ -1,0 +1,12 @@
+2024-10-24 15:11:27.815 - INFO - 19336 - azureml.train.automl._local_managed_utils.is_docker_installed:356 - Docker is not installed.
+2024-10-24 15:11:27.816 - INFO - 19336 - azureml.train.automl.automlconfig._start_execution:231 - Submitting remote.
+2024-10-24 15:43:48.149 - INFO - 19336 - azureml.train.automl._local_managed_utils.is_docker_installed:356 - Docker is not installed.
+2024-10-24 15:43:48.151 - INFO - 19336 - azureml.train.automl.automlconfig._start_execution:231 - Submitting remote.
+2024-10-24 15:49:15.332 - INFO - 19336 - azureml.train.automl._local_managed_utils.is_docker_installed:356 - Docker is not installed.
+2024-10-24 15:50:57.048 - INFO - 19336 - azureml.train.automl._local_managed_utils.is_docker_installed:356 - Docker is not installed.
+2024-10-24 15:50:57.051 - INFO - 19336 - azureml.train.automl.automlconfig._start_execution:231 - Submitting remote.
+2024-10-24 15:57:36.206 - INFO - 19336 - azureml.train.automl._local_managed_utils.is_docker_installed:356 - Docker is not installed.
+2024-10-24 15:57:36.208 - INFO - 19336 - azureml.train.automl.automlconfig._start_execution:231 - Submitting remote.
+2024-10-24 16:31:18.707 - WARNING - 19336 - azureml.training.tabular.models._timeseries._prophet_model.<module>:32 - Unable to import prophet.
+2024-10-24 16:31:30.610 - INFO - 19336 - azureml.automl.runtime.featurization.data_transformer.__init__:190 - Feature sweeping enabled: False
+2024-10-24 16:31:30.611 - INFO - 19336 - azureml.automl.runtime.featurization.data_transformer.__init__:191 - Feature sweeping timeout: 86400
