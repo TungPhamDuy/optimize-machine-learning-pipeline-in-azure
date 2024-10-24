@@ -85,6 +85,7 @@ The hyperparameters tuned in these models include learning rates, max depth, and
 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+
 The manually built logistic regression model achieved an accuracy of **0.91** with the following best configuration: regularization strength (`C`) of **0.2667** and **50** iterations to converge. This model's performance is limited to the basic evaluation metric of accuracy, which is often used but doesn't fully capture the performance of a model, especially for imbalanced datasets or complex prediction tasks.
 
 On the other hand, the AutoML model provides a much more comprehensive set of evaluation metrics. In terms of accuracy, the AutoML model slightly outperforms the manually built logistic regression model with an accuracy of **0.917**. However, beyond accuracy, the AutoML model shows significantly more detailed metrics, such as AUC (Area Under the Curve), precision, recall, F1 scores, and Matthews correlation coefficient. For example, it reports an AUC-weighted score of **0.946**, which indicates strong overall classification performance. It also achieved a high precision score weighted at **0.91** and an F1 score weighted of **0.912**, showing that the AutoML model is not only making correct predictions but also handling false positives and false negatives effectively.
